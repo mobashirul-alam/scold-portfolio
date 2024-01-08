@@ -1,3 +1,3 @@
 export default function Home() {
-    return <div>Scold Portfolio Site</div>;
+    return <div className="h-[100vh]">Scold Portfolio Site</div>;
 }
