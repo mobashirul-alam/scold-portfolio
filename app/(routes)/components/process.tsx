@@ -1,7 +1,42 @@
+import Accordion from "@/components/ui/accordion";
 import Banner from "@/components/ui/banner";
 import MarqueeBig from "@/components/ui/marqueeBig";
+import { Roboto_Mono } from "next/font/google";
+
+const robotoMono = Roboto_Mono({ subsets: ["latin"] });
 
 const Process = () => {
+    const items = [
+        {
+            id: "01",
+            title: "Discovery call",
+            heading: "Let's see if we click",
+            description:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas sed tempus urna. Porta nibh venenatis cras sed felis eget velit aliquet sagittis. ",
+        },
+        {
+            id: "02",
+            title: "Concept",
+            heading: "We need a strategy",
+            description:
+                "Turpis egestas sed tempus urna. Porta nibh venenatis cras sed felis eget velit aliquet sagittis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas sed tempus urna. Porta nibh venenatis cras sed felis eget velit aliquet sagittis. ",
+        },
+        {
+            id: "03",
+            title: "Design",
+            heading: "Let the magic happen",
+            description:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas sed tempus urna. Porta nibh venenatis cras sed felis eget velit aliquet sagittis. ",
+        },
+        {
+            id: "04",
+            title: "Delivery",
+            heading: "Ready to rock",
+            description:
+                "Turpis egestas sed tempus urna. Porta nibh venenatis cras sed felis eget velit aliquet sagittis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas sed tempus urna. Porta nibh venenatis cras sed felis eget velit aliquet sagittis. ",
+        },
+    ];
+
     return (
         <div>
             <div className="border-b-[1px] border-black">
@@ -15,6 +50,19 @@ const Process = () => {
                 titleSize="text-[80px]"
                 scrollComp={false}
             />
+            <div className="grid grid-cols-2">
+                <div className=" border-b-[1px] border-r-[1px] border-black"></div>
+                <div>
+                    <Accordion items={items} />
+                    <div>
+                        <button
+                            className={`${robotoMono.className} w-full text-white bg-black py-5 hover:bg-opacity-80 duration-500`}
+                        >
+                            GET IN TOUCH
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };
