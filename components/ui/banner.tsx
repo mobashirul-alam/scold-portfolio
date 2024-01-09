@@ -9,14 +9,23 @@ interface BannerProps {
     icon: string;
     title: string;
     description: string;
+    titleSize: string;
+    scrollComp: boolean;
 }
 
-const Banner: React.FC<BannerProps> = ({ img, icon, title, description }) => {
+const Banner: React.FC<BannerProps> = ({
+    img,
+    icon,
+    title,
+    description,
+    titleSize,
+    scrollComp,
+}) => {
     return (
         <div>
-            <div className="flex items-center border-b-[1px] border-black">
+            <div className="grid grid-cols-2 border-b-[1px] border-black">
                 <div
-                    className="border-r-[1px] border-black w-[960px] h-[900px]"
+                    className="border-r-[1px] border-black w-full h-full"
                     style={{
                         background: `url(${"/Noise.png"}), lightgray 0% 0% / 100px 100px repeat`,
                     }}
@@ -30,17 +39,23 @@ const Banner: React.FC<BannerProps> = ({ img, icon, title, description }) => {
                         />
                     )}
                 </div>
-                <div className="flex-1">
-                    <div className="p-16">
+                <div>
+                    <div
+                        className={`p-16 ${
+                            scrollComp && "border-b-[1px] border-black"
+                        }`}
+                    >
                         <Image
                             src={icon}
                             alt="icon"
                             width={80}
                             height={80}
-                            className="mb-[351px]"
+                            className={"mb-[351px]"}
                         />
                         <div className={`${manrope.className}`}>
-                            <h1 className="text-8xl leading-[106px] max-w-2xl mb-4">
+                            <h1
+                                className={`${titleSize} leading-[106px] max-w-2xl mb-4`}
+                            >
                                 {title}
                             </h1>
                             <p className="text-lg leading-8 max-w-lg">
@@ -48,15 +63,20 @@ const Banner: React.FC<BannerProps> = ({ img, icon, title, description }) => {
                             </p>
                         </div>
                     </div>
-                    <div className="px-4 pt-2 flex justify-between items-center border-t-[1px] border-black">
-                        <p className={`${robotoMono.className}`}>Scroll Down</p>
-                        <Image
-                            src={"/arrow-down.svg"}
-                            alt="icon"
-                            width={16}
-                            height={16}
-                        />
-                    </div>
+
+                    {scrollComp && (
+                        <div className="px-4 pt-[6px] pb-1 flex justify-between items-center">
+                            <p className={`${robotoMono.className}`}>
+                                Scroll Down
+                            </p>
+                            <Image
+                                src={"/arrow-down.svg"}
+                                alt="icon"
+                                width={16}
+                                height={16}
+                            />
+                        </div>
+                    )}
                 </div>
             </div>
         </div>
