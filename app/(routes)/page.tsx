@@ -1,7 +1,9 @@
+import SocialMedia from "../../components/socialMedia";
+import AboutMe from "./components/aboutMe";
 import BrandingServices from "./components/brandingServices";
+import FeedBack from "./components/feedBack";
 import HomeBanner from "./components/homeBanner";
 import Process from "./components/process";
-import SocialMedia from "./components/socialMedia";
 import WorkBrands from "./components/workBrands";
 
 export default function Home() {
@@ -12,6 +14,8 @@ export default function Home() {
             <BrandingServices />
             <Process />
             <SocialMedia />
+            <AboutMe />
+            <FeedBack />
             <p className="text-center my-20 text-5xl">
                 Development is going on...
             </p>

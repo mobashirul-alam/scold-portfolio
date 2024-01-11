@@ -19,9 +19,11 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={manrope.className}>
-                <Navbar />
-                {children}
-                <Footer />
+                <div className="max-w-[1920px] mx-auto border-x-[1px] border-black">
+                    <Navbar />
+                    {children}
+                    <Footer />
+                </div>
             </body>
         </html>
     );
