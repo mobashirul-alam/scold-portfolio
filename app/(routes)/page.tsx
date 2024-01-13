@@ -1,3 +1,4 @@
+import ContactPromo from "@/components/contactPromo";
 import SocialMedia from "../../components/socialMedia";
 import AboutMe from "./components/aboutMe";
 import BrandingServices from "./components/brandingServices";
@@ -16,6 +17,7 @@ export default function Home() {
             <SocialMedia />
             <AboutMe />
             <FeedBack />
+            <ContactPromo />
             <p className="text-center my-20 text-5xl">
                 Development is going on...
             </p>
