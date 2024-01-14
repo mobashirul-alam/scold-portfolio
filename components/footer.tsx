@@ -18,7 +18,7 @@ const Footer = () => {
     return (
         <div className={`${robotoMono.className}`}>
             <div className="px-16 border-t-[1px] border-black grid grid-cols-4">
-                <div className="border-r-[1px] border-black py-12 flex flex-col items-start">
+                <div className="border-r-[1px] border-black py-12 flex flex-col items-start mr-[30px]">
                     <Image
                         src={"/skold-logo.svg"}
                         alt="logo"
