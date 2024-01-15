@@ -10,7 +10,7 @@ interface BannerProps {
     title: string;
     description: string;
     titleSize: string;
-    scrollComp: boolean;
+    scrollComp?: boolean;
 }
 
 const Banner: React.FC<BannerProps> = ({
@@ -53,9 +53,7 @@ const Banner: React.FC<BannerProps> = ({
                             className={"mb-[351px]"}
                         />
                         <div className={`${manrope.className}`}>
-                            <h1
-                                className={`${titleSize} leading-[106px] max-w-2xl mb-4`}
-                            >
+                            <h1 className={`${titleSize} leading-[106px] mb-4`}>
                                 {title}
                             </h1>
                             <p className="text-lg leading-8 max-w-lg">

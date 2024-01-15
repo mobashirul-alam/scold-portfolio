@@ -47,7 +47,7 @@ const Process = () => {
                 title="Your new brand in 4 steps."
                 description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
                 img="/home/men-1.png"
-                titleSize="text-[80px]"
+                titleSize="text-[80px] max-w-2xl"
                 scrollComp={false}
             />
             <div className="grid grid-cols-2">

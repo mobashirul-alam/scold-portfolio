@@ -13,7 +13,7 @@ const Contact = () => {
                         Let&apos;s get in touch.
                     </h1>
                 </div>
-                <div className="px-16 py-32">
+                <div className="px-16 py-16">
                     <form>
                         <div className="text-[13px] flex flex-col items-start mb-8">
                             <label htmlFor="name" className="mb-4 uppercase">

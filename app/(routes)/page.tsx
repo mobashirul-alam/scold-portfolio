@@ -18,9 +18,6 @@ export default function Home() {
             <AboutMe />
             <FeedBack />
             <ContactPromo />
-            <p className="text-center my-20 text-5xl">
-                Development is going on...
-            </p>
         </div>
     );
 }
