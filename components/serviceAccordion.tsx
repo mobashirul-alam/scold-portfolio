@@ -1,11 +1,7 @@
-"use client";
-
-import { Roboto_Mono } from "next/font/google";
 import { ReactNode, useState } from "react";
+import { manrope, robotoMono } from "./utils";
 
-const robotoMono = Roboto_Mono({ subsets: ["latin"] });
-
-interface AccordionItem {
+interface ServiceAccordionItem {
     id: string;
     title: string;
     heading: string;
@@ -14,17 +10,13 @@ interface AccordionItem {
     iconClose: ReactNode;
 }
 
-const Accordion: React.FC<{ items: AccordionItem[] }> = ({ items }) => {
-    const [activeIndices, setActiveIndices] = useState<number[]>(
-        items.map((_, index) => index)
-    );
+const ServiceAccordion: React.FC<{ items: ServiceAccordionItem[] }> = ({
+    items,
+}) => {
+    const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
     const onTitleClick = (index: number) => {
-        setActiveIndices(
-            activeIndices.includes(index)
-                ? activeIndices.filter((i) => i !== index)
-                : [...activeIndices, index]
-        );
+        setActiveIndex(index === activeIndex ? null : index);
     };
 
     return (
@@ -34,21 +26,21 @@ const Accordion: React.FC<{ items: AccordionItem[] }> = ({ items }) => {
                     <div
                         className={`${
                             robotoMono.className
-                        } accordion-title p-4 cursor-pointer flex justify-between items-center transition-all duration-300 ease-in-out border-b-[1px] border-black capitalize ${
-                            activeIndices.includes(index)
-                                ? "bg-gray-100"
-                                : "bg-gray-50"
+                        } accordion-title p-12 cursor-pointer flex justify-between items-center transition-all duration-300 ease-in-out border-b-[1px] border-black capitalize ${
+                            activeIndex === index ? "bg-gray-200" : "bg-gray-50"
                         }`}
                         onClick={() => onTitleClick(index)}
                     >
-                        {item.title}
-                        {activeIndices.includes(index)
-                            ? item.iconClose
-                            : item.iconOpen}
+                        <div
+                            className={`${manrope.className} flex items-center gap-x-16 text-5xl`}
+                        >
+                            <span>{item.id}</span>
+                            <span>{item.title}</span>
+                        </div>
+                        {activeIndex === index ? item.iconClose : item.iconOpen}
                     </div>
-                    {activeIndices.includes(index) && (
+                    {activeIndex === index && (
                         <div className="accordion-content p-12 flex items-start gap-x-16 transition-all duration-1000 ease-in-out border-b-[1px] border-black">
-                            <p className="text-2xl">{item.id}</p>
                             <div>
                                 <h3 className="text-2xl mb-4 capitalize">
                                     {item.heading}
@@ -63,4 +55,4 @@ const Accordion: React.FC<{ items: AccordionItem[] }> = ({ items }) => {
     );
 };
 
-export default Accordion;
+export default ServiceAccordion;

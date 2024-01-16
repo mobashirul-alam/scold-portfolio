@@ -34,9 +34,9 @@ const Footer = () => {
                         <h3>PAGES</h3>
                         <div className="my-8 flex flex-col items-start gap-y-6 text-[13px]">
                             <Link href={"/"}>HOME</Link>
-                            <Link href={"/"}>SERVICES</Link>
-                            <Link href={"/"}>ABOUT ME</Link>
-                            <Link href={"/"}>CONTACT</Link>
+                            <Link href={"/services"}>SERVICES</Link>
+                            <Link href={"/about"}>ABOUT ME</Link>
+                            <Link href={"/contact"}>CONTACT</Link>
                         </div>
                         <button className="text-[13px] border-[1px] border-black px-4 py-3 bg-[#EBFB48]">
                             More Templates

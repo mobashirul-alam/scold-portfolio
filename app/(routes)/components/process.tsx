@@ -1,18 +1,31 @@
 import Accordion from "@/components/ui/accordion";
 import Banner from "@/components/ui/banner";
 import MarqueeBig from "@/components/ui/marqueeBig";
+import { ArrowDown, ArrowUp } from "lucide-react";
 import { Roboto_Mono } from "next/font/google";
+import { ReactNode } from "react";
 
 const robotoMono = Roboto_Mono({ subsets: ["latin"] });
 
+interface Item {
+    id: string;
+    title: string;
+    heading: string;
+    description: string;
+    iconOpen: ReactNode;
+    iconClose: ReactNode;
+}
+
 const Process = () => {
-    const items = [
+    const items: Item[] = [
         {
             id: "01",
             title: "Discovery call",
             heading: "Let's see if we click",
             description:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas sed tempus urna. Porta nibh venenatis cras sed felis eget velit aliquet sagittis. ",
+            iconOpen: <ArrowDown size={16} />,
+            iconClose: <ArrowUp size={16} />,
         },
         {
             id: "02",
@@ -20,6 +33,8 @@ const Process = () => {
             heading: "We need a strategy",
             description:
                 "Turpis egestas sed tempus urna. Porta nibh venenatis cras sed felis eget velit aliquet sagittis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas sed tempus urna. Porta nibh venenatis cras sed felis eget velit aliquet sagittis. ",
+            iconOpen: <ArrowDown size={16} />,
+            iconClose: <ArrowUp size={16} />,
         },
         {
             id: "03",
@@ -27,6 +42,8 @@ const Process = () => {
             heading: "Let the magic happen",
             description:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas sed tempus urna. Porta nibh venenatis cras sed felis eget velit aliquet sagittis. ",
+            iconOpen: <ArrowDown size={16} />,
+            iconClose: <ArrowUp size={16} />,
         },
         {
             id: "04",
@@ -34,6 +51,8 @@ const Process = () => {
             heading: "Ready to rock",
             description:
                 "Turpis egestas sed tempus urna. Porta nibh venenatis cras sed felis eget velit aliquet sagittis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas sed tempus urna. Porta nibh venenatis cras sed felis eget velit aliquet sagittis. ",
+            iconOpen: <ArrowDown size={16} />,
+            iconClose: <ArrowUp size={16} />,
         },
     ];
 
