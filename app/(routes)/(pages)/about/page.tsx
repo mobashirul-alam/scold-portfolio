@@ -87,7 +87,7 @@ const AboutPage = () => {
                         >
                             Experience
                         </p>
-                        <p className="text-xl lg:text-[32px] mb-20 lg:mb-0">
+                        <p className="text-xl lg:text-[32px] lg:leading-[44px] mb-20 lg:mb-0">
                             As a freelance brand designer with over 12 years of
                             experience, I know how to create stunning brands to
                             make your business stand out.
