@@ -83,13 +83,13 @@ const SingleProjectPage = () => {
                             height={900}
                         />
                     </div>
-                    <div>
+                    <div className="relative">
                         <div
-                            className={`p-6 md:p-12 lg:p-16 lg:border-b-[1px] border-black
+                            className={`p-6 md:p-12 lg:p-16  h-full flex flex-col justify-between
                             }`}
                         >
                             <div
-                                className={`${robotoMono.className} text-[13px] uppercase mb-20 lg:mb-[265px]`}
+                                className={`${robotoMono.className} text-[13px] uppercase`}
                             >
                                 <p className="text-[#777777]">Client</p>
                                 <p>Vision Studio</p>
@@ -114,7 +114,7 @@ const SingleProjectPage = () => {
                             </div>
                         </div>
 
-                        <div className="hidden px-4 pt-[6px] pb-1 lg:flex justify-between items-center">
+                        <div className="hidden px-4 pt-[6px] pb-1 absolute bottom-0 w-full lg:flex justify-between items-center border-t-[1px] border-black">
                             <p className={`${robotoMono.className}`}>
                                 Scroll Down
                             </p>
