@@ -23,9 +23,9 @@ const Banner: React.FC<BannerProps> = ({
 }) => {
     return (
         <div>
-            <div className="grid grid-cols-2 border-b-[1px] border-black">
+            <div className="grid grid-cols-1 lg:grid-cols-2 border-b-[1px] border-black">
                 <div
-                    className="border-r-[1px] border-black w-full h-full"
+                    className="border-b-[1px] lg:border-b-0 lg:border-r-[1px] border-black w-full h-full"
                     style={{
                         background: `url(${"/Noise.png"}), lightgray 0% 0% / 100px 100px repeat`,
                     }}
@@ -41,7 +41,7 @@ const Banner: React.FC<BannerProps> = ({
                 </div>
                 <div>
                     <div
-                        className={`p-16 ${
+                        className={`p-6 md:p-12 lg:p-16 ${
                             scrollComp && "border-b-[1px] border-black"
                         }`}
                     >
@@ -50,20 +50,22 @@ const Banner: React.FC<BannerProps> = ({
                             alt="icon"
                             width={80}
                             height={80}
-                            className={"mb-[351px]"}
+                            className={"mb-20 md:mb-40 lg:mb-[351px]"}
                         />
                         <div className={`${manrope.className}`}>
-                            <h1 className={`${titleSize} leading-[106px] mb-4`}>
+                            <h1
+                                className={`${titleSize} leading-[56px] lg:leading-[106px] mb-4`}
+                            >
                                 {title}
                             </h1>
-                            <p className="text-lg leading-8 max-w-lg">
+                            <p className="text-base lg:text-lg lg:leading-8 max-w-lg">
                                 {description}
                             </p>
                         </div>
                     </div>
 
                     {scrollComp && (
-                        <div className="px-4 pt-[6px] pb-1 flex justify-between items-center">
+                        <div className="px-4 pt-1 lg:pt-[6px] pb-1 flex justify-between items-center">
                             <p className={`${robotoMono.className}`}>
                                 Scroll Down
                             </p>

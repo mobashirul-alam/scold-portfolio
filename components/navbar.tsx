@@ -1,6 +1,7 @@
 import { Roboto_Mono } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
+import MobileNav from "./mobileNav";
 import MarqueeLine from "./ui/marquee";
 
 const robotoMono = Roboto_Mono({ subsets: ["latin"] });
@@ -22,7 +23,7 @@ const Navbar = () => {
                         />
                     </Link>
                 </div>
-                <div className="flex items-center">
+                <div className="hidden lg:flex items-center">
                     <div className="flex items-center gap-x-9 mr-9">
                         <Link href={"/projects"}>PROJECTS</Link>
                         <Link href={"/services"}>SERVICES</Link>
@@ -36,6 +37,10 @@ const Navbar = () => {
                             GET IN TOUCH
                         </Link>
                     </div>
+                </div>
+
+                <div className="lg:hidden">
+                    <MobileNav />
                 </div>
             </div>
         </div>

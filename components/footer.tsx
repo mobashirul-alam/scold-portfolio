@@ -17,8 +17,8 @@ const Footer = () => {
 
     return (
         <div className={`${robotoMono.className}`}>
-            <div className="px-16 border-t-[1px] border-black grid grid-cols-4">
-                <div className="border-r-[1px] border-black py-12 flex flex-col items-start mr-[30px]">
+            <div className="px-6 md:px-12 lg:px-16 border-t-[1px] border-black grid grid-cols-2 lg:grid-cols-4">
+                <div className="border-r-[1px] border-black py-6 lg:py-12 flex flex-col items-start lg:mr-[30px]">
                     <Image
                         src={"/skold-logo.svg"}
                         alt="logo"
@@ -29,34 +29,30 @@ const Footer = () => {
                         Main Street 16 22222 Lisbon
                     </p>
                 </div>
-                <div className="py-12 pl-16">
+                <div className="py-6 lg:py-12 pl-6 md:pl-16">
                     <div className="flex flex-col items-start">
                         <h3>PAGES</h3>
-                        <div className="my-8 flex flex-col items-start gap-y-6 text-[13px]">
+                        <div className="my-4 lg:my-8 flex flex-col items-start gap-y-3 lg:gap-y-6 text-[13px]">
                             <Link href={"/"}>HOME</Link>
                             <Link href={"/services"}>SERVICES</Link>
                             <Link href={"/about"}>ABOUT ME</Link>
                             <Link href={"/contact"}>CONTACT</Link>
                         </div>
-                        <button className="text-[13px] border-[1px] border-black px-4 py-3 bg-[#EBFB48]">
+                        <button className="text-[13px] border-[1px] border-black px-4 py-3 bg-[#EBFB48] whitespace-nowrap">
                             More Templates
                         </button>
                     </div>
                 </div>
-                <div className="py-12 pl-8">
+                <div className="hidden lg:block py-12 pl-8">
                     <div className="flex flex-col items-start">
                         <h3>CMS</h3>
                         <div className="mt-8 flex flex-col items-start gap-y-6 text-[13px]">
                             <Link href={"/"}>WORK</Link>
                             <Link href={"/"}>WORK SINGLE</Link>
-                            <Link href={"/"}>BLOG</Link>
-                            <Link href={"/"}>BLOG SINGLE</Link>
-                            <Link href={"/"}>SHOP</Link>
-                            <Link href={"/"}>SHOP SINGLE</Link>
                         </div>
                     </div>
                 </div>
-                <div className="py-12 pl-8">
+                <div className="hidden lg:block py-12 pl-8">
                     <div className="flex flex-col items-start">
                         <h3>UTILITY PAGES</h3>
                         <div className="mt-8 flex flex-col items-start gap-y-6 text-[13px]">
@@ -71,11 +67,11 @@ const Footer = () => {
             </div>
 
             {/* Bottom line */}
-            <div className="border-t-[1px] border-black flex justify-between items-center px-8">
-                <p className="py-7">
+            <div className="border-t-[1px] border-black flex justify-center lg:justify-between items-center px-8">
+                <p className="py-7 text-center">
                     © 2024 MADE BY SOMEONE. POWERED BY SOME COMP
                 </p>
-                <div className="flex items-center">
+                <div className="hidden lg:flex items-center">
                     <Link
                         href={"/"}
                         className="px-8 py-7 border-l-[1px] border-black"

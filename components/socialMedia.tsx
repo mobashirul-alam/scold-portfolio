@@ -41,7 +41,7 @@ const SocialMedia = () => {
         <div>
             <MarqueeLine text="+++ FIND ME ON SOCIAL MEDIA" />
 
-            <div className="grid grid-cols-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
                 {socialInfo.map((info) => (
                     <div key={info.id} className="border-t-[1px] border-black">
                         <div className="p-12 border-l-[1px] border-black">

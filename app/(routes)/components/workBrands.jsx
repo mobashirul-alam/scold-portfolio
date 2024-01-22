@@ -16,16 +16,17 @@ const WorkBrands = () => {
 
     return (
         <div>
-            <div className="flex justify-between items-center px-16 border-b-[1px] border-black">
+            <div className="flex flex-col lg:flex-row justify-between items-center lg:px-16 border-b-[1px] border-black gap-y-10 pb-10 lg:pb-0">
                 <div className="">
                     <p
-                        className={`${robotoMono.className} pr-16 py-12 text-[13px]
+                        className={`${robotoMono.className} lg:pr-16 pt-6 lg:pt-12 lg:pb-12 text-lg lg:text-[13px]
                         `}
                     >
                         Brands I&apos;ve worked with
                     </p>
+                    <div className="lg:hidden bg-black w-full mx-auto h-[1px] mt-4"></div>
                 </div>
-                <div className="bg-black w-[1px] h-32"></div>
+                <div className="hidden lg:block bg-black lg:w-[1px] h-[1px] lg:h-32"></div>
                 {brandLogos.map((logo) => (
                     <Image
                         key={logo.id}

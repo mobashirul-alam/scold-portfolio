@@ -73,15 +73,15 @@ const FeedBack = () => {
                 <MarqueeBig text="Feedback" />
             </div>
 
-            <div className="grid grid-cols-2 border-b-[1px] border-black">
-                <div className="h-full border-r-[1px] border-black p-16 flex flex-col justify-between items-start">
-                    <div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 border-b-[1px] border-black">
+                <div className="h-full border-r-[1px] border-black p-6 md:p-12 lg:p-16 flex flex-col justify-between items-start">
+                    <div className="mb-20 lg:mb-0">
                         <p
-                            className={`${robotoMono.className} uppercase text-[13px]`}
+                            className={`${robotoMono.className} uppercase text-[13px] mb-5 lg:mb-0`}
                         >
                             Testimonials
                         </p>
-                        <h1 className="text-[80px] leading-[88px] mb-auto">
+                        <h1 className="text-5xl lg:text-[80px] leading-[48px] lg:leading-[88px] mb-5 lg:mb-auto">
                             What my <br /> clients say
                         </h1>
                         <p className="text-lg mt-5">
@@ -101,7 +101,7 @@ const FeedBack = () => {
                     </div>
                 </div>
                 <div>
-                    <div className="grid grid-cols-2 gap-x-2 gap-y-2 p-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-2 p-6">
                         {reviews.map((review) => (
                             <div
                                 key={review.id}
@@ -125,7 +125,7 @@ const FeedBack = () => {
                                         )}
                                     </div>
                                 </div>
-                                <div className="p-12 flex flex-col items-start">
+                                <div className="p-6 lg:p-12 flex flex-col items-start">
                                     <Image
                                         src={review.logo}
                                         alt=""

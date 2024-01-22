@@ -20,13 +20,13 @@ const ServiceAccordion: React.FC<{ items: ServiceAccordionItem[] }> = ({
     };
 
     return (
-        <div className="accordion">
+        <div>
             {items.map((item, index) => (
                 <div key={index}>
                     <div
                         className={`${
                             robotoMono.className
-                        } accordion-title p-12 cursor-pointer flex justify-between items-center transition-all duration-300 ease-in-out border-b-[1px] border-black capitalize ${
+                        } p-12 cursor-pointer flex justify-between items-center transition-all duration-300 ease-in-out border-b-[1px] border-black capitalize ${
                             activeIndex === index ? "bg-gray-200" : "bg-gray-50"
                         }`}
                         onClick={() => onTitleClick(index)}
@@ -40,7 +40,7 @@ const ServiceAccordion: React.FC<{ items: ServiceAccordionItem[] }> = ({
                         {activeIndex === index ? item.iconClose : item.iconOpen}
                     </div>
                     {activeIndex === index && (
-                        <div className="accordion-content p-12 flex items-start gap-x-16 transition-all duration-1000 ease-in-out border-b-[1px] border-black">
+                        <div className="p-12 flex items-start gap-x-16 transition-all duration-1000 ease-in-out border-b-[1px] border-black">
                             <div>
                                 <h3 className="text-2xl mb-4 capitalize">
                                     {item.heading}

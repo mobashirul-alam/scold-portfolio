@@ -8,7 +8,7 @@ const HomeBanner = () => {
                 icon="/icon/icon-1.svg"
                 title="Creating unique brands."
                 description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
-                titleSize="text-8xl max-w-2xl"
+                titleSize="text-5xl md:text-6xl lg:text-8xl max-w-xl lg:max-w-2xl"
                 scrollComp={true}
             />
         </div>
