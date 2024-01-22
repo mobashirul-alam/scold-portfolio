@@ -67,37 +67,37 @@ const Footer = () => {
             </div>
 
             {/* Bottom line */}
-            <div className="border-t-[1px] border-black flex justify-center lg:justify-between items-center px-8">
-                <p className="py-7 text-center">
+            <div className="border-t-[1px] border-black flex justify-center lg:justify-between items-center px-8 lg:px-4 xl:px-8">
+                <p className="py-7 lg:py-1 xl:py-7 text-center">
                     © 2024 MADE BY SOMEONE. POWERED BY SOME COMP
                 </p>
                 <div className="hidden lg:flex items-center">
                     <Link
                         href={"/"}
-                        className="px-8 py-7 border-l-[1px] border-black"
+                        className="px-8 lg:px-2 xl:px-8 py-7 lg:py-3 xl:py-7 border-l-[1px] border-black"
                     >
                         INSTAGRAM
                     </Link>
                     <Link
                         href={"/"}
-                        className="px-8 py-7 border-l-[1px] border-black"
+                        className="px-8 lg:px-2 xl:px-8 py-7 lg:py-3 xl:py-7 border-l-[1px] border-black"
                     >
                         TWITTER
                     </Link>
                     <Link
                         href={"/"}
-                        className="px-8 py-7 border-l-[1px] border-black"
+                        className="px-8 lg:px-2 xl:px-8 py-7 lg:py-3 xl:py-7 border-l-[1px] border-black"
                     >
                         BEHANCE
                     </Link>
                     <Link
                         href={"/"}
-                        className="px-8 py-7 border-l-[1px] border-black"
+                        className="px-8 lg:px-2 xl:px-8 py-7 lg:py-3 xl:py-7 border-l-[1px] border-black"
                     >
                         DRIBBLE
                     </Link>
                     <button
-                        className="border-l-[1px] border-black py-9 pl-8 cursor-pointer"
+                        className="border-l-[1px] border-black py-[19px] xl:py-9 pl-4 xl:pl-8 cursor-pointer"
                         onClick={scrollToTop}
                     >
                         <Image

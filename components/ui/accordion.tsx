@@ -47,7 +47,7 @@ const Accordion: React.FC<{ items: AccordionItem[] }> = ({ items }) => {
                             : item.iconOpen}
                     </div>
                     {activeIndices.includes(index) && (
-                        <div className="p-6 md:p-12 lg:p-12 flex items-start gap-x-6 md:gap-x-10 lg:gap-x-16 transition-all duration-1000 ease-in-out border-b-[1px] border-black">
+                        <div className="p-6 md:p-12 lg:p-6 xl:p-12 flex items-start gap-x-6 md:gap-x-10 xl:gap-x-16 transition-all duration-1000 ease-in-out border-b-[1px] border-black">
                             <p className="text-2xl">{item.id}</p>
                             <div>
                                 <h3 className="text-2xl mb-4 capitalize">

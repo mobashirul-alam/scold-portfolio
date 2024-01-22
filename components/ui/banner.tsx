@@ -39,33 +39,35 @@ const Banner: React.FC<BannerProps> = ({
                         />
                     )}
                 </div>
-                <div>
+                <div className="relative">
                     <div
-                        className={`p-6 md:p-12 lg:p-16 ${
-                            scrollComp && "border-b-[1px] border-black"
-                        }`}
+                        className={`p-6 md:p-12 lg:p-9 xl:p-16 h-full flex flex-col justify-between `}
                     >
                         <Image
                             src={icon}
                             alt="icon"
                             width={80}
                             height={80}
-                            className={"mb-20 md:mb-40 lg:mb-[351px]"}
+                            className="mb-20 lg:mb-0"
                         />
                         <div className={`${manrope.className}`}>
                             <h1
-                                className={`${titleSize} leading-[56px] lg:leading-[106px] mb-4`}
+                                className={`${titleSize} leading-[56px] xl:leading-[80px] 2xl:leading-[106px] mb-4`}
                             >
                                 {title}
                             </h1>
-                            <p className="text-base lg:text-lg lg:leading-8 max-w-lg">
+                            <p
+                                className={`text-base lg:text-lg lg:leading-8 max-w-lg ${
+                                    scrollComp && "mb-6 md:mb-0"
+                                }`}
+                            >
                                 {description}
                             </p>
                         </div>
                     </div>
 
                     {scrollComp && (
-                        <div className="px-4 pt-1 lg:pt-[6px] pb-1 flex justify-between items-center">
+                        <div className="px-4 pt-1 lg:pt-[6px] pb-1 flex justify-between items-center absolute bottom-0 border-t-[1px] border-black w-full">
                             <p className={`${robotoMono.className}`}>
                                 Scroll Down
                             </p>

@@ -29,15 +29,17 @@ const ProjectsPage = () => {
     ];
     return (
         <div>
-            <div className="p-16 border-b-[1px] border-black">
-                <h1 className="text-[96px]">Projects</h1>
+            <div className="p-6 md:p-12 lg:p-16 border-b-[1px] border-black">
+                <h1 className="text-5xl md:text-7xl lg:text-[96px] mb-6">
+                    Projects
+                </h1>
                 <p className="text-lg">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Enim voluptates commodi non, fugiat corporis quas.
                 </p>
             </div>
             <div>
-                <div className="grid grid-cols-2">
+                <div className="grid grid-cols-1 md:grid-cols-2">
                     {projects.map((project) => (
                         <div
                             key={project.id}
@@ -51,7 +53,7 @@ const ProjectsPage = () => {
                             />
                             <Link
                                 href={`/projects/${project.id}`}
-                                className="absolute bottom-0 w-full bg-white flex justify-between items-center p-4 uppercase border-t-[1px] border-black opacity-0 group-hover:opacity-100 hover:bg-black hover:text-white duration-500 cursor-pointer"
+                                className="absolute bottom-0 w-full bg-white flex justify-between items-center p-4 uppercase border-t-[1px] border-black opacity-100 lg:opacity-0 group-hover:opacity-100 hover:bg-black hover:text-white duration-500 cursor-pointer"
                             >
                                 <p
                                     className={`${robotoMono.className} text-[13px]`}

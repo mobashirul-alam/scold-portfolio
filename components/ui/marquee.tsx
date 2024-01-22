@@ -8,7 +8,7 @@ const MarqueeLine = ({ text }: { text: string }) => {
         <div>
             <Marquee
                 autoFill={true}
-                className="bg-[#EBFB48] py-2 md:py-4 lg:py-5"
+                className="bg-[#EBFB48] py-2 md:py-4 xl:py-5"
             >
                 <p
                     className={`${robotoMono.className} text-xs md:text-base px-3 uppercase`}

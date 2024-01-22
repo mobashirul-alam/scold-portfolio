@@ -13,7 +13,7 @@ const Navbar = () => {
 
             {/* Main nav */}
             <div className="border-y-[1px] border-black flex justify-between items-center">
-                <div className="px-8 py-6 border-r-[1px] border-black">
+                <div className="px-6 lg:px-8 py-6 border-r-[1px] border-black">
                     <Link href={"/"}>
                         <Image
                             src={"/skold-logo.svg"}

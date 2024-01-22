@@ -72,22 +72,22 @@ const AboutPage = () => {
                     title="Freelance brand designer."
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
                     scrollComp={true}
-                    titleSize="text-8xl max-w-3xl"
+                    titleSize="text-5xl md:text-6xl lg:text-8xl max-w-3xl"
                     icon="/icon/icon-2.svg"
                     img="/about-man.png"
                 />
             </div>
 
             {/* Experience section */}
-            <div className="grid grid-cols-2">
-                <div className="p-16 border-r-[1px] border-b-[1px] border-black flex flex-col justify-between items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-2">
+                <div className="p-6 md:p-12 lg:p-16 border-r-[1px] border-b-[1px] border-black flex flex-col justify-between items-start">
                     <div>
                         <p
                             className={`${robotoMono.className} text-[13px] mb-4 uppercase`}
                         >
                             Experience
                         </p>
-                        <p className="text-[32px]">
+                        <p className="text-xl lg:text-[32px] mb-20 lg:mb-0">
                             As a freelance brand designer with over 12 years of
                             experience, I know how to create stunning brands to
                             make your business stand out.
@@ -104,10 +104,12 @@ const AboutPage = () => {
                     {experiences.map((exp) => (
                         <div
                             key={exp.id}
-                            className="p-12 flex justify-between items-center border-b-[1px] border-black hover:bg-black/5 duration-300"
+                            className="p-6 md:p-8 lg:p-12 flex justify-between items-center border-b-[1px] border-black hover:bg-black/5 duration-300"
                         >
                             <div>
-                                <h3 className="text-2xl">{exp.designation}</h3>
+                                <h3 className="text-xl md:text-2xl">
+                                    {exp.designation}
+                                </h3>
                                 <p
                                     className={`${robotoMono.className} text-[13px]`}
                                 >
@@ -128,14 +130,14 @@ const AboutPage = () => {
             <div>
                 <MarqueeBig text="Awards" />
 
-                <div className="grid grid-cols-2 border-t-[1px] border-black">
-                    <div className="p-16 border-r-[1px] border-b-[1px] border-black flex flex-col justify-between items-start">
+                <div className="grid grid-cols-1 lg:grid-cols-2 border-t-[1px] border-black">
+                    <div className="p-6 md:p-12 lg:p-16 border-r-[1px] border-b-[1px] border-black flex flex-col justify-between items-start">
                         <p
-                            className={`${robotoMono.className} text-[13px] mb-4 uppercase`}
+                            className={`${robotoMono.className} text-[13px] mb-20 lg:mb-4 uppercase`}
                         >
                             Awards
                         </p>
-                        <p className="text-[48px]">
+                        <p className="text-4xl lg:text-[48px]">
                             Lorem ipsum dolor sit amet.
                         </p>
                     </div>
@@ -143,16 +145,18 @@ const AboutPage = () => {
                         {awards.map((award) => (
                             <div
                                 key={award.id}
-                                className="p-12 flex justify-between items-center border-b-[1px] border-black hover:bg-black/5 duration-300"
+                                className="p-6 md:p-8 lg:p-12 flex justify-between items-center border-b-[1px] border-black hover:bg-black/5 duration-300"
                             >
-                                <div className="flex items-center gap-x-8">
+                                <div className="flex items-center gap-x-4 md:gap-x-8">
                                     <Image
                                         src={award.icon}
                                         alt="icon"
                                         width={30}
                                         height={30}
                                     />
-                                    <p className="text-2xl">{award.name}</p>
+                                    <p className="text-xl md:text-2xl">
+                                        {award.name}
+                                    </p>
                                 </div>
                                 <p
                                     className={`${robotoMono.className} text-[13px]`}

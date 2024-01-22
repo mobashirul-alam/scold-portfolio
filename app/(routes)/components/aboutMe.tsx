@@ -5,14 +5,14 @@ const AboutMe = () => {
     return (
         <div>
             <div className="grid grid-cols-1 lg:grid-cols-2 border-b-[1px] border-black">
-                <div className="h-full border-b-[1px] lg:border-b-0 lg:border-r-[1px] border-black p-6 md:p-12 lg:p-16 flex flex-col justify-between items-start">
+                <div className="h-full border-b-[1px] lg:border-b-0 lg:border-r-[1px] border-black p-6 md:p-12 lg:p-9 xl:p-16 flex flex-col justify-between items-start">
                     <div>
                         <p
                             className={`${robotoMono.className} uppercase text-[13px] mb-5 lg:mb-0`}
                         >
                             About Me
                         </p>
-                        <h1 className="text-5xl lg:text-[80px] leading-[48px] lg:leading-[88px] mb-5 lg:mb-auto">
+                        <h1 className="text-5xl xl:text-[80px] leading-[48px] xl:leading-[88px] mb-5 xl:mb-auto">
                             Passion <br /> for design.
                         </h1>
                     </div>

@@ -69,9 +69,9 @@ const SingleProjectPage = () => {
         <div>
             <div>
                 {/* Banner */}
-                <div className="grid grid-cols-2 border-b-[1px] border-black">
+                <div className="grid grid-cols-1 lg:grid-cols-2 border-b-[1px] border-black">
                     <div
-                        className="border-r-[1px] border-black w-full h-full"
+                        className="border-b-[1px] lg:border-b-0 lg:border-r-[1px] border-black w-full h-full"
                         style={{
                             background: `url(${"/Noise.png"}), lightgray 0% 0% / 100px 100px repeat`,
                         }}
@@ -85,18 +85,18 @@ const SingleProjectPage = () => {
                     </div>
                     <div>
                         <div
-                            className={`p-16 border-b-[1px] border-black
+                            className={`p-6 md:p-12 lg:p-16 lg:border-b-[1px] border-black
                             }`}
                         >
                             <div
-                                className={`${robotoMono.className} text-[13px] uppercase mb-[265px]`}
+                                className={`${robotoMono.className} text-[13px] uppercase mb-20 lg:mb-[265px]`}
                             >
                                 <p className="text-[#777777]">Client</p>
                                 <p>Vision Studio</p>
                             </div>
                             <div className={`${manrope.className}`}>
                                 <h1
-                                    className={`text-8xl max-w-lg leading-[106px] mb-4`}
+                                    className={`text-5xl md:text-6xl lg:text-8xl max-w-lg leading-[106px] lg:mb-4`}
                                 >
                                     Vision Square
                                 </h1>
@@ -114,7 +114,7 @@ const SingleProjectPage = () => {
                             </div>
                         </div>
 
-                        <div className="px-4 pt-[6px] pb-1 flex justify-between items-center">
+                        <div className="hidden px-4 pt-[6px] pb-1 lg:flex justify-between items-center">
                             <p className={`${robotoMono.className}`}>
                                 Scroll Down
                             </p>
@@ -129,8 +129,8 @@ const SingleProjectPage = () => {
                 </div>
 
                 {/* Details */}
-                <div className="grid grid-cols-2">
-                    <div className="border-r-[1px] border-b-[1px] border-black"></div>
+                <div className="grid grid-cols-1 lg:grid-cols-2">
+                    <div className="border-r-[1px] lg:border-b-[1px] border-black"></div>
                     <div className={`${robotoMono.className} text-[13px]`}>
                         <div className="flex justify-between items-center p-8 border-b-[1px] border-black">
                             <p className="uppercase">Timeline</p>
@@ -158,7 +158,7 @@ const SingleProjectPage = () => {
                     <MarqueeBig text="Gallery" />
                 </div>
 
-                <div className="grid grid-cols-2">
+                <div className="grid grid-cols-1 md:grid-cols-2">
                     {projectsImages.map((image) => (
                         <div
                             key={image.id}

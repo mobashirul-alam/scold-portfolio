@@ -30,7 +30,7 @@ const SocialMedia = () => {
             icon: "/icon/ri_behance-line.svg",
         },
         {
-            id: 1,
+            id: 4,
             name: "Dribble",
             text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
             link: "/",
@@ -44,14 +44,14 @@ const SocialMedia = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
                 {socialInfo.map((info) => (
                     <div key={info.id} className="border-t-[1px] border-black">
-                        <div className="p-12 border-l-[1px] border-black">
+                        <div className="p-12 lg:p-6 xl:p-12 border-l-[1px] border-black">
                             <Image
                                 src={info.icon}
                                 alt="icon"
                                 width={30}
                                 height={30}
                             />
-                            <h3 className="uppercase mt-60 text-2xl mb-2">
+                            <h3 className="uppercase mt-60 lg:mt-32 xl:mt-60 text-2xl mb-2">
                                 {info.name}
                             </h3>
                             <p className="p-0">{info.text}</p>

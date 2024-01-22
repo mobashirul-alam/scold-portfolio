@@ -60,7 +60,7 @@ const ServicePage = () => {
                 icon="/icon/icon-3.svg"
                 title="All-in-one branding"
                 description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
-                titleSize="text-8xl max-w-2xl"
+                titleSize="text-5xl md:text-6xl lg:text-8xl max-w-2xl"
                 img="/about-man.png"
             />
 

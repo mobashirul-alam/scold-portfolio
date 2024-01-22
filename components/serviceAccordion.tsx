@@ -26,13 +26,13 @@ const ServiceAccordion: React.FC<{ items: ServiceAccordionItem[] }> = ({
                     <div
                         className={`${
                             robotoMono.className
-                        } p-12 cursor-pointer flex justify-between items-center transition-all duration-300 ease-in-out border-b-[1px] border-black capitalize ${
+                        } p-6 md:p-8 lg:p-12 cursor-pointer flex justify-between items-center transition-all duration-300 ease-in-out border-b-[1px] border-black capitalize ${
                             activeIndex === index ? "bg-gray-200" : "bg-gray-50"
                         }`}
                         onClick={() => onTitleClick(index)}
                     >
                         <div
-                            className={`${manrope.className} flex items-center gap-x-16 text-5xl`}
+                            className={`${manrope.className} flex items-center gap-x-6 md:gap-x-12 lg:gap-x-16 text-2xl md:text-3xl lg:text-5xl`}
                         >
                             <span>{item.id}</span>
                             <span>{item.title}</span>
@@ -40,7 +40,7 @@ const ServiceAccordion: React.FC<{ items: ServiceAccordionItem[] }> = ({
                         {activeIndex === index ? item.iconClose : item.iconOpen}
                     </div>
                     {activeIndex === index && (
-                        <div className="p-12 flex items-start gap-x-16 transition-all duration-1000 ease-in-out border-b-[1px] border-black">
+                        <div className="p-6 md:p-8 lg:p-12 flex items-start gap-x-16 transition-all duration-1000 ease-in-out border-b-[1px] border-black">
                             <div>
                                 <h3 className="text-2xl mb-4 capitalize">
                                     {item.heading}
